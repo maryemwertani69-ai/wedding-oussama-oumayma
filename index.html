@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Oussama Machraoui & Oumayma Jghobbi | Notre Mariage
+  </title>
+
+  <meta
+    name="description"
+    content="Invitation au mariage de Oussama Machraoui & Oumayma Jghobbi"
+  >
+
+  <meta
+    name="theme-color"
+    content="#17251f"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     LOADER
+========================================== -->
+
+<div id="loader">
+
+  <div class="loader-ring"></div>
+
+  <div class="loader-logo">
+    O & O
+  </div>
+
+  <p>
+    Notre histoire commence ici...
+  </p>
+
+</div>
+
+
+<!-- ==========================================
+     AUDIO
+========================================== -->
+
+<audio
+  id="weddingMusic"
+  preload="auto"
+  loop
+>
+  <source
+    src="./wedding-song.mp3"
+    type="audio/mpeg"
+  >
+</audio>
+
+
+<button
+  id="musicBtn"
+  class="music-btn"
+  type="button"
+  aria-label="Musique"
+>
+
+  <span class="music-icon">
+    ♫
+  </span>
+
+  <span class="music-bars">
+    <i></i>
+    <i></i>
+    <i></i>
+  </span>
+
+</button>
+
+
+<div
+  class="particles"
+  id="particles"
+></div>
+
+
+<!-- ==========================================
+     INTRO CINÉMATIQUE
+========================================== -->
+
+<section
+  class="premium-intro"
+  id="welcomeModal"
+>
+
+  <div class="intro-image"></div>
+
+  <div class="intro-dark"></div>
+
+  <div class="intro-light"></div>
+
+  <div class="intro-frame"></div>
+
+
+  <div class="intro-content">
+
+    <p class="intro-eyebrow">
+      AVEC LA BÉNÉDICTION DE NOS FAMILLES
+    </p>
+
+
+    <div class="intro-monogram">
+
+      <span>O</span>
+
+      <i>&</i>
+
+      <span>O</span>
+
+    </div>
+
+
+    <p class="intro-arabic">
+      بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ
+    </p>
+
+
+    <div class="intro-separator">
+
+      <span></span>
+
+      <b>♡</b>
+
+      <span></span>
+
+    </div>
+
+
+    <h1 class="intro-names">
+
+      <span>
+        Oussama Machraoui
+      </span>
+
+      <small>
+        &
+      </small>
+
+      <span>
+        Oumayma Jghobbi
+      </span>
+
+    </h1>
+
+
+    <p class="intro-date">
+      25 & 28 SEPTEMBRE 2026
+    </p>
+
+
+    <p class="intro-location">
+      Maison d’Hôtes Adrar
+    </p>
+
+
+    <button
+      class="enter-btn"
+      type="button"
+      onclick="enterInvitation()"
+    >
+
+      <span>
+        Entrer dans notre histoire
+      </span>
+
+      <b>
+        →
+      </b>
+
+    </button>
+
+
+    <button
+      class="silent-btn"
+      type="button"
+      onclick="enterWithoutMusic()"
+    >
+      Continuer sans musique
+    </button>
+
+
+    <p class="sound-note">
+      ♫ Activez le son pour vivre pleinement l'expérience
+    </p>
+
+  </div>
+
+
+  <!-- transition au clic -->
+
+  <div class="cinema-line cinema-line-left"></div>
+
+  <div class="cinema-line cinema-line-right"></div>
+
+</section>
+
+
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<header
+  class="hero"
+  id="accueil"
+>
+
+  <div class="hero-image"></div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-frame"></div>
+
+
+  <div class="hero-content">
+
+    <p class="mini-text hero-reveal">
+      NOTRE HISTOIRE • NOTRE PROMESSE
+    </p>
+
+
+    <p class="arabic hero-reveal delay-1">
+      بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ
+    </p>
+
+
+    <div class="heart-line hero-reveal delay-2">
+
+      <span></span>
+
+      <b>
+        ♡
+      </b>
+
+      <span></span>
+
+    </div>
+
+
+    <h1 class="names hero-reveal delay-2">
+
+      <span>
+        Oussama Machraoui
+      </span>
+
+      <small>
+        &
+      </small>
+
+      <span>
+        Oumayma Jghobbi
+      </span>
+
+    </h1>
+
+
+    <p class="invitation-text hero-reveal delay-3">
+
+      ont l'immense bonheur de vous inviter
+
+      <br>
+
+      à partager avec eux
+
+      <br>
+
+      les plus beaux moments de leur union.
+
+    </p>
+
+
+    <div class="main-date hero-reveal delay-4">
+
+      <span>
+        25 & 28 SEPTEMBRE
+      </span>
+
+      <strong>
+        2026
+      </strong>
+
+    </div>
+
+
+    <button
+      class="discover-btn hero-reveal delay-4"
+      onclick="scrollToInvitation()"
+    >
+
+      Découvrir nos célébrations
+
+      <span>
+        ↓
+      </span>
+
+    </button>
+
+  </div>
+
+
+  <div class="scroll-indicator">
+
+    <span></span>
+
+  </div>
+
+</header>
+
+
+
+<!-- ==========================================
+     VERSET
+========================================== -->
+
+<section class="quote-section">
+
+  <div class="section-inner reveal-section">
+
+    <div class="ornament">
+      ✦
+    </div>
+
+
+    <p class="arabic-quote">
+
+      وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ
+      أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ
+      مَوَدَّةً وَرَحْمَةً
+
+    </p>
+
+
+    <div class="gold-line"></div>
+
+
+    <p class="quote">
+
+      « Deux âmes, un même chemin,
+
+      <br>
+
+      une histoire pour toute une vie. »
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     EVENTS
+========================================== -->
+
+<section
+  class="events-section"
+  id="invitation"
+>
+
+
+  <div class="section-heading reveal-section">
+
+    <span>
+      DEUX MOMENTS • UNE MÊME HISTOIRE
+    </span>
+
+    <h2>
+      Nos célébrations
+    </h2>
+
+    <div class="title-decoration">
+
+      <span></span>
+
+      ❦
+
+      <span></span>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="events-container">
+
+
+    <!-- WTEYA -->
+
+    <article
+      class="event-card wteya-card reveal-section"
+    >
+
+      <span class="event-index">
+        01
+      </span>
+
+      <p class="event-label">
+        PREMIÈRE CÉLÉBRATION
+      </p>
+
+      <h3>
+        La Wteya
+      </h3>
+
+
+      <p class="event-description">
+        Une soirée entre tradition,
+        émotion et partage.
+      </p>
+
+
+      <div class="date-display">
+
+        <div>
+
+          <span>
+            VEN
+          </span>
+
+          <small>
+            Vendredi
+          </small>
+
+        </div>
+
+
+        <strong>
+          25
+        </strong>
+
+
+        <div>
+
+          <span>
+            SEP
+          </span>
+
+          <small>
+            2026
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div class="event-info">
+
+        <p>
+
+          <span class="info-icon">
+            ◷
+          </span>
+
+          À partir de
+
+          <strong>
+            19h00
+          </strong>
+
+        </p>
+
+
+        <p>
+
+          <span class="info-icon">
+            ⌖
+          </span>
+
+          <strong>
+            Maison d’Hôtes Adrar
+          </strong>
+
+        </p>
+
+      </div>
+
+
+      <a
+        href="#"
+        class="map-btn"
+        onclick="openMap(event, 'Maison d Hôtes Adrar Tunisie')"
+      >
+
+        Voir l'itinéraire
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+    </article>
+
+
+
+    <!-- MARIAGE -->
+
+    <article
+      class="event-card marriage-card reveal-section"
+    >
+
+      <div class="featured-label">
+        LE GRAND JOUR
+      </div>
+
+
+      <span class="event-index">
+        02
+      </span>
+
+
+      <p class="event-label">
+        CÉLÉBRATION DU MARIAGE
+      </p>
+
+
+      <h3>
+        Notre Mariage
+      </h3>
+
+
+      <p class="event-description">
+        Le moment où deux chemins
+        deviennent une seule histoire.
+      </p>
+
+
+      <div class="date-display">
+
+        <div>
+
+          <span>
+            LUN
+          </span>
+
+          <small>
+            Lundi
+          </small>
+
+        </div>
+
+
+        <strong>
+          28
+        </strong>
+
+
+        <div>
+
+          <span>
+            SEP
+          </span>
+
+          <small>
+            2026
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div class="event-info">
+
+        <p>
+
+          <span class="info-icon">
+            ◷
+          </span>
+
+          À partir de
+
+          <strong>
+            19h00
+          </strong>
+
+        </p>
+
+
+        <p>
+
+          <span class="info-icon">
+            ⌖
+          </span>
+
+          <strong>
+            Maison d’Hôtes Adrar
+          </strong>
+
+        </p>
+
+      </div>
+
+
+      <a
+        href="#"
+        class="map-btn"
+        onclick="openMap(event, 'Maison d Hôtes Adrar Tunisie')"
+      >
+
+        Voir l'itinéraire
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CINEMATIC TRANSITION
+========================================== -->
+
+<section class="cinematic-transition">
+
+  <div class="transition-image"></div>
+
+  <div class="transition-overlay"></div>
+
+
+  <div class="transition-content reveal-section">
+
+    <p>
+      PUIS VIENDRA
+    </p>
+
+    <span>
+      ❦
+    </span>
+
+    <h2>
+      Le Grand Jour
+    </h2>
+
+    <small>
+      28 Septembre 2026 • 19h00
+    </small>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     COUNTDOWN
+========================================== -->
+
+<section class="countdown-section">
+
+
+  <div class="countdown-content reveal-section">
+
+    <p class="countdown-small">
+      LE COMPTE À REBOURS EST LANCÉ
+    </p>
+
+
+    <h2>
+      Jusqu'à notre grand jour
+    </h2>
+
+
+    <div
+      class="countdown"
+      id="countdown"
+    >
+
+
+      <div class="count-box">
+
+        <strong id="days">
+          00
+        </strong>
+
+        <span>
+          Jours
+        </span>
+
+      </div>
+
+
+      <div class="separator">
+        :
+      </div>
+
+
+      <div class="count-box">
+
+        <strong id="hours">
+          00
+        </strong>
+
+        <span>
+          Heures
+        </span>
+
+      </div>
+
+
+      <div class="separator">
+        :
+      </div>
+
+
+      <div class="count-box">
+
+        <strong id="minutes">
+          00
+        </strong>
+
+        <span>
+          Minutes
+        </span>
+
+      </div>
+
+
+      <div class="separator">
+        :
+      </div>
+
+
+      <div class="count-box">
+
+        <strong id="seconds">
+          00
+        </strong>
+
+        <span>
+          Secondes
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     STORY
+========================================== -->
+
+<section class="story-section">
+
+  <div class="section-inner reveal-section">
+
+    <p class="story-intro">
+      UNE NOUVELLE PAGE
+    </p>
+
+
+    <h2>
+      Notre histoire ne fait que commencer...
+    </h2>
+
+
+    <p>
+
+      Nous serions heureux et honorés
+
+      <br>
+
+      de vous compter parmi nous pour célébrer
+
+      <br>
+
+      ces instants remplis d'amour,
+
+      <br>
+
+      de joie et de partage.
+
+    </p>
+
+
+    <div class="signature">
+
+      Oussama Machraoui
+
+      <span>
+        &
+      </span>
+
+      Oumayma Jghobbi
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     RSVP
+========================================== -->
+
+<section class="rsvp-section">
+
+
+  <div class="rsvp-card reveal-section">
+
+    <span class="rsvp-top">
+      VOTRE PRÉSENCE EST NOTRE PLUS BEAU CADEAU
+    </span>
+
+
+    <h2>
+      Serez-vous des nôtres ?
+    </h2>
+
+
+    <p>
+
+      Merci de confirmer votre présence afin de partager
+
+      <br>
+
+      avec nous ces moments exceptionnels.
+
+    </p>
+
+
+    <a
+      class="whatsapp-btn"
+      href="https://wa.me/216XXXXXXXX?text=Bonjour%20Oussama%20et%20Oumayma%20❤️%20Je%20confirme%20ma%20présence."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      ♡ Confirmer ma présence
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+  <div class="footer-decoration">
+    ❦
+  </div>
+
+
+  <h2>
+
+    Oussama Machraoui
+
+    <span>
+      &
+    </span>
+
+    Oumayma Jghobbi
+
+  </h2>
+
+
+  <p>
+    25 & 28 SEPTEMBRE 2026 • 19H00
+  </p>
+
+
+  <small>
+    Maison d’Hôtes Adrar
+  </small>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
