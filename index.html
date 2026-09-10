@@ -111,82 +111,87 @@
 
 
 <!-- ==========================================
-     INTRO ENVELOPPE / CERCLE PREMIUM
+     INTRO INVITATION ORIENTALE
 ========================================== -->
-<section class="circle-intro" id="welcomeModal">
+<section class="oriental-intro" id="welcomeModal">
+  <div class="oriental-paper-noise"></div>
 
-  <div class="invite-grain"></div>
-  <div class="invite-corner invite-corner-tl">❦</div>
-  <div class="invite-corner invite-corner-br">❦</div>
+  <div class="oriental-stage">
+    <div class="oriental-envelope">
+      <div class="oriental-envelope-back"></div>
 
-  <div class="envelope-shell">
-    <div class="envelope-back"></div>
+      <div class="oriental-card">
+        <div class="oriental-card-frame"></div>
 
-    <div class="envelope-card">
-      <p class="invite-eyebrow">AVEC LA BÉNÉDICTION DE NOS FAMILLES</p>
+        <div class="oriental-arch">
+          <div class="oriental-arch-inner"></div>
+        </div>
 
-      <p class="invite-arabic">
-        بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ
-      </p>
+        <div class="oriental-flower flower-left">✦</div>
+        <div class="oriental-flower flower-right">✦</div>
 
-      <div class="invite-ornament">
-        <span></span>
+        <div class="oriental-card-content">
+          <div class="oriental-monogram">O <span>&</span> O</div>
+
+          <p class="oriental-date-top">25 & 28 SEPTEMBRE 2026</p>
+
+          <h1 class="oriental-names">
+            <span>Oussama Machraoui</span>
+            <small>&</small>
+            <span>Oumayma Jghobbi</span>
+          </h1>
+
+          <p class="oriental-blessing">
+            اللهم بارك لهما وبارك عليهما<br>
+            واجمع بينهما في خير
+          </p>
+
+          <p class="oriental-place">Maison d’Hôtes Adrar</p>
+        </div>
+      </div>
+
+      <div class="oriental-flap oriental-flap-left"></div>
+      <div class="oriental-flap oriental-flap-right"></div>
+      <div class="oriental-flap oriental-flap-bottom"></div>
+
+      <div class="oriental-flap-top">
+        <div class="flap-ornament">❦</div>
+      </div>
+
+      <div class="oriental-seal">
+        <div class="seal-ring"></div>
+        <div class="seal-ring ring-two"></div>
+        <div class="seal-center">
+          <span>O</span><small>&</small><span>O</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="oriental-actions">
+      <button
+        type="button"
+        class="oriental-open-btn"
+        onclick="enterInvitation()"
+      >
+        <span>Entrer dans l'invitation</span>
         <b>♡</b>
-        <span></span>
-      </div>
+      </button>
 
-      <h1 class="invite-names">
-        <span>Oussama Machraoui</span>
-        <small>&</small>
-        <span>Oumayma Jghobbi</span>
-      </h1>
+      <button
+        type="button"
+        class="oriental-silent-btn"
+        onclick="enterWithoutMusic()"
+      >
+        Continuer sans musique
+      </button>
 
-      <p class="invite-date">25 & 28 SEPTEMBRE 2026</p>
-      <p class="invite-place">Maison d’Hôtes Adrar</p>
-    </div>
-
-    <div class="envelope-flap envelope-flap-left"></div>
-    <div class="envelope-flap envelope-flap-right"></div>
-    <div class="envelope-flap envelope-flap-bottom"></div>
-    <div class="envelope-flap envelope-flap-top"></div>
-
-    <div class="wax-seal">
-      <div class="seal-orbit seal-orbit-one"></div>
-      <div class="seal-orbit seal-orbit-two"></div>
-      <div class="seal-core">
-        <span>O</span>
-        <small>&</small>
-        <span>O</span>
-      </div>
+      <p class="oriental-note">
+        ♫ Activez le son pour vivre pleinement l'expérience
+      </p>
     </div>
   </div>
-
-  <div class="intro-actions">
-    <button
-      class="circle-enter-btn"
-      type="button"
-      onclick="document.getElementById('welcomeModal').classList.add('opening'); setTimeout(() => enterInvitation(), 1100)"
-    >
-      <span>Ouvrir l'invitation</span>
-      <b>♡</b>
-    </button>
-
-    <button
-      class="circle-silent-btn"
-      type="button"
-      onclick="document.getElementById('welcomeModal').classList.add('opening'); setTimeout(() => enterWithoutMusic(), 1100)"
-    >
-      Continuer sans musique
-    </button>
-
-    <p class="circle-sound-note">
-      ♫ Activez le son pour vivre pleinement l'expérience
-    </p>
-  </div>
-
-  <div class="circle-opening-layer"></div>
-
 </section>
+
 
 
 <!-- ==========================================
