@@ -4200,3 +4200,187 @@ footer small {
   }
 }
 
+
+
+/* =========================================================
+   FINAL 2026-09-10 — INTRO CERCLE + HERO IVOIRE
+   maison.jpg is intentionally used only in lower sections.
+========================================================= */
+
+/* Hide the old photo-based intro/hero backgrounds */
+.intro-image { display: none !important; background: none !important; }
+.hero-image { background: none !important; animation: none !important; transform: none !important; }
+
+.circle-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(185,151,91,.13), transparent 30%),
+    linear-gradient(145deg,#fffefa 0%,#faf5ee 52%,#efe4d7 100%);
+  color: #51443e;
+  clip-path: circle(0% at 50% 50%);
+  animation: invitationCircleOpen 1.15s cubic-bezier(.22,1,.36,1) forwards;
+  transition: opacity .8s ease, visibility .8s ease;
+}
+
+@keyframes invitationCircleOpen {
+  0% { clip-path: circle(0% at 50% 50%); }
+  72% { clip-path: circle(72% at 50% 50%); }
+  100% { clip-path: circle(150% at 50% 50%); }
+}
+
+.circle-intro.hide { opacity:0; visibility:hidden; pointer-events:none; }
+
+.circle-intro::before {
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(185,151,91,.28);
+  pointer-events:none;
+}
+
+.circle-intro::after {
+  content:"✦";
+  position:absolute;
+  left:50%;
+  bottom:22px;
+  transform:translateX(-50%);
+  color:#b9975b;
+  font-size:11px;
+  opacity:.65;
+}
+
+.circle-bg-decoration {
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(185,151,91,.13);
+  pointer-events:none;
+}
+.circle-bg-1 { width:520px;height:520px;top:-270px;right:-170px;animation:bgCircleFloat 9s ease-in-out infinite; }
+.circle-bg-2 { width:430px;height:430px;bottom:-235px;left:-150px;animation:bgCircleFloat 11s ease-in-out infinite reverse; }
+@keyframes bgCircleFloat { 50% { transform:translateY(-16px) scale(1.04); } }
+
+.circle-intro-content {
+  position:relative;
+  z-index:5;
+  width:min(760px,94%);
+  padding:36px 20px;
+  text-align:center;
+}
+
+.circle-top-text {
+  margin-bottom:23px;
+  font-size:8px;
+  letter-spacing:4px;
+  color:#9d7c4a;
+  opacity:0;
+  animation:circleFadeUp .8s .35s ease forwards;
+}
+
+.circle-stage { position:relative;width:238px;height:238px;margin:0 auto 28px; }
+.circle-orbit { position:absolute;border-radius:50%;pointer-events:none; }
+.orbit-one { inset:0;border:1px solid rgba(185,151,91,.36);border-top-color:#b9975b;border-right-color:transparent;animation:orbitRotate 7s linear infinite; }
+.orbit-two { inset:14px;border:1px dashed rgba(185,151,91,.30);animation:orbitRotateReverse 11s linear infinite; }
+.orbit-three { inset:-12px;border:1px solid rgba(185,151,91,.10);border-left-color:#dfc792;animation:orbitRotate 16s linear infinite; }
+@keyframes orbitRotate { to { transform:rotate(360deg); } }
+@keyframes orbitRotateReverse { to { transform:rotate(-360deg); } }
+
+.circle-main {
+  position:absolute;
+  inset:27px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(247,239,227,.96));
+  border:1px solid rgba(185,151,91,.46);
+  box-shadow:0 25px 70px rgba(120,86,50,.12),inset 0 0 42px rgba(255,255,255,.8);
+  opacity:0;transform:scale(.5) rotate(-18deg);
+  animation:mainCircleAppear 1.05s .35s cubic-bezier(.22,1,.36,1) forwards;
+}
+@keyframes mainCircleAppear { 70%{opacity:1;transform:scale(1.05) rotate(2deg)} 100%{opacity:1;transform:scale(1) rotate(0)} }
+
+.circle-inner {
+  width:78%;height:78%;border-radius:50%;
+  border:1px solid rgba(185,151,91,.23);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.32);
+}
+.circle-monogram { font-family:"Cormorant Garamond",serif;font-size:37px;letter-spacing:4px;color:#8d6b39;opacity:0;animation:monogramReveal .75s .9s ease forwards; }
+.circle-monogram span { margin:0 3px;color:#b9975b;font-style:italic;font-size:23px; }
+@keyframes monogramReveal { from{opacity:0;transform:scale(.78)} to{opacity:1;transform:scale(1)} }
+.circle-small-line { width:42px;height:1px;margin:12px auto 11px;background:linear-gradient(to right,transparent,#b9975b,transparent); }
+.circle-arabic { font-family:"Amiri",serif;font-size:17px;color:#9c7a46;opacity:0;animation:circleFadeUp .8s 1.05s ease forwards; }
+
+.circle-names { font-family:"Great Vibes",cursive;font-size:clamp(45px,6.5vw,76px);line-height:.92;font-weight:400;color:#554740; }
+.circle-names span { display:block;opacity:0;filter:blur(7px);transform:translateY(18px) scale(.96); }
+.circle-names .groom-name { animation:circleNameReveal 1s 1s cubic-bezier(.22,1,.36,1) forwards; }
+.circle-names .bride-name { animation:circleNameReveal 1s 1.24s cubic-bezier(.22,1,.36,1) forwards; }
+.circle-names small { display:block;margin:4px 0;font-family:"Cormorant Garamond",serif;font-size:23px;font-style:italic;color:#b9975b;opacity:0;animation:circleFadeUp .7s 1.15s ease forwards; }
+@keyframes circleNameReveal { to { opacity:1;filter:blur(0);transform:translateY(0) scale(1); } }
+@keyframes circleFadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+
+.circle-date { margin-top:18px;font-size:8px;letter-spacing:4px;color:#a27e49;opacity:0;animation:circleFadeUp .8s 1.48s ease forwards; }
+.circle-location { margin-top:6px;font-family:"Cormorant Garamond",serif;font-size:17px;font-style:italic;color:#75655d;opacity:0;animation:circleFadeUp .8s 1.6s ease forwards; }
+.circle-enter-btn {
+  position:relative;overflow:hidden;margin-top:21px;padding:14px 27px;
+  border:1px solid rgba(185,151,91,.56);background:rgba(255,255,255,.58);color:#665148;
+  font-family:"Montserrat",sans-serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;
+  box-shadow:0 12px 35px rgba(80,59,41,.07);opacity:0;animation:circleFadeUp .8s 1.76s ease forwards;
+  transition:transform .35s ease,box-shadow .35s ease,background .35s ease;
+}
+.circle-enter-btn::before { content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.92) 45%,transparent 70%);transform:translateX(-130%);transition:transform .7s ease; }
+.circle-enter-btn:hover::before { transform:translateX(130%); }
+.circle-enter-btn:hover { transform:translateY(-3px);background:#f5eadc;box-shadow:0 18px 45px rgba(80,59,41,.12); }
+.circle-enter-btn span,.circle-enter-btn b { position:relative;z-index:2; }
+.circle-enter-btn b { margin-left:12px;color:#b9975b; }
+.circle-silent-btn { display:block;margin:11px auto 0;border:0;background:transparent;color:#8c7c73;font-size:8px;cursor:pointer;opacity:0;animation:circleFadeUp .8s 1.9s ease forwards; }
+.circle-sound-note { margin-top:11px;font-family:"Cormorant Garamond",serif;font-size:12px;font-style:italic;color:#9b8a80;opacity:0;animation:circleFadeUp .8s 2s ease forwards; }
+
+/* The first page after opening is now ivory, not the venue photo */
+.hero {
+  background:
+    radial-gradient(circle at 50% 25%,rgba(185,151,91,.12),transparent 30%),
+    linear-gradient(160deg,#fffefa 0%,#f9f3eb 58%,#eee1d4 100%) !important;
+  color:#51443e !important;
+}
+.hero-overlay {
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.15),rgba(159,128,118,.08) 60%,rgba(159,128,118,.14)) !important;
+}
+.hero-frame { border-color:rgba(185,151,91,.42) !important; }
+.mini-text { color:#8e786d !important; }
+.arabic,.heart-line b,.main-date,.names small { color:#b18a50 !important; }
+.heart-line span { background:linear-gradient(to right,transparent,#c5a66d) !important; }
+.names { color:#554740 !important; text-shadow:none !important; }
+.invitation-text { color:#74645d !important; }
+.main-date strong { border-left-color:rgba(185,151,91,.34) !important; }
+.discover-btn { border-color:rgba(185,151,91,.52) !important;background:rgba(255,255,255,.42) !important;color:#665148 !important; }
+.discover-btn:hover { background:#f2e4d6 !important;color:#5e4940 !important; }
+.scroll-indicator { border-color:rgba(185,151,91,.42) !important; }
+.scroll-indicator span { background:#b9975b !important; }
+
+/* Keep venue image only lower in the page */
+.transition-image { background-image:url("./maison.jpg") !important; }
+
+@media (max-width:600px) {
+  .circle-intro::before { inset:10px; }
+  .circle-intro-content { width:100%;max-height:100svh;overflow-y:auto;padding:26px 15px 21px; }
+  .circle-top-text { margin-bottom:16px;font-size:6px;letter-spacing:2.1px; }
+  .circle-stage { width:170px;height:170px;margin-bottom:20px; }
+  .circle-main { inset:19px; }
+  .circle-monogram { font-size:28px; }
+  .circle-monogram span { font-size:18px; }
+  .circle-arabic { font-size:14px; }
+  .circle-names { font-size:clamp(37px,11vw,49px); }
+  .circle-names small { font-size:18px;margin:1px 0; }
+  .circle-date { margin-top:13px;font-size:6px;letter-spacing:2px; }
+  .circle-location { font-size:14px; }
+  .circle-enter-btn { width:100%;max-width:280px;margin-top:15px;padding:13px 10px;font-size:7px;letter-spacing:1.2px; }
+  .circle-silent-btn { font-size:7px; }
+  .circle-sound-note { font-size:10px; }
+  .hero-content { padding:82px 17px 70px !important; }
+}
