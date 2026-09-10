@@ -111,48 +111,83 @@
 
 
 <!-- ==========================================
-     INTRO CERCLE PREMIUM
+     INTRO ENVELOPPE / CERCLE PREMIUM
 ========================================== -->
 <section class="circle-intro" id="welcomeModal">
-  <div class="circle-bg-decoration circle-bg-1"></div>
-  <div class="circle-bg-decoration circle-bg-2"></div>
 
-  <div class="circle-intro-content">
-    <p class="circle-top-text">AVEC LA BÉNÉDICTION DE NOS FAMILLES</p>
+  <div class="invite-grain"></div>
+  <div class="invite-corner invite-corner-tl">❦</div>
+  <div class="invite-corner invite-corner-br">❦</div>
 
-    <div class="circle-stage" aria-hidden="true">
-      <div class="circle-orbit orbit-one"></div>
-      <div class="circle-orbit orbit-two"></div>
-      <div class="circle-orbit orbit-three"></div>
-      <div class="circle-main">
-        <div class="circle-inner">
-          <div class="circle-monogram">O <span>&</span> O</div>
-          <div class="circle-small-line"></div>
-          <p class="circle-arabic">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</p>
-        </div>
+  <div class="envelope-shell">
+    <div class="envelope-back"></div>
+
+    <div class="envelope-card">
+      <p class="invite-eyebrow">AVEC LA BÉNÉDICTION DE NOS FAMILLES</p>
+
+      <p class="invite-arabic">
+        بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ
+      </p>
+
+      <div class="invite-ornament">
+        <span></span>
+        <b>♡</b>
+        <span></span>
       </div>
+
+      <h1 class="invite-names">
+        <span>Oussama Machraoui</span>
+        <small>&</small>
+        <span>Oumayma Jghobbi</span>
+      </h1>
+
+      <p class="invite-date">25 & 28 SEPTEMBRE 2026</p>
+      <p class="invite-place">Maison d’Hôtes Adrar</p>
     </div>
 
-    <h1 class="circle-names">
-      <span class="groom-name">Oussama Machraoui</span>
-      <small>&</small>
-      <span class="bride-name">Oumayma Jghobbi</span>
-    </h1>
+    <div class="envelope-flap envelope-flap-left"></div>
+    <div class="envelope-flap envelope-flap-right"></div>
+    <div class="envelope-flap envelope-flap-bottom"></div>
+    <div class="envelope-flap envelope-flap-top"></div>
 
-    <p class="circle-date">25 & 28 SEPTEMBRE 2026</p>
-    <p class="circle-location">Maison d’Hôtes Adrar</p>
+    <div class="wax-seal">
+      <div class="seal-orbit seal-orbit-one"></div>
+      <div class="seal-orbit seal-orbit-two"></div>
+      <div class="seal-core">
+        <span>O</span>
+        <small>&</small>
+        <span>O</span>
+      </div>
+    </div>
+  </div>
 
-    <button class="circle-enter-btn" type="button" onclick="enterInvitation()">
-      <span>Ouvrir l'invitation</span><b>♡</b>
+  <div class="intro-actions">
+    <button
+      class="circle-enter-btn"
+      type="button"
+      onclick="document.getElementById('welcomeModal').classList.add('opening'); setTimeout(() => enterInvitation(), 1100)"
+    >
+      <span>Ouvrir l'invitation</span>
+      <b>♡</b>
     </button>
 
-    <button class="circle-silent-btn" type="button" onclick="enterWithoutMusic()">
+    <button
+      class="circle-silent-btn"
+      type="button"
+      onclick="document.getElementById('welcomeModal').classList.add('opening'); setTimeout(() => enterWithoutMusic(), 1100)"
+    >
       Continuer sans musique
     </button>
 
-    <p class="circle-sound-note">♫ Activez le son pour vivre pleinement l'expérience</p>
+    <p class="circle-sound-note">
+      ♫ Activez le son pour vivre pleinement l'expérience
+    </p>
   </div>
+
+  <div class="circle-opening-layer"></div>
+
 </section>
+
 
 <!-- ==========================================
      HERO
